@@ -1,0 +1,23 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--clr-white);
+    display: grid;
+    grid-template-rows: auto lfr auto;
+    row-gap: 1rem;
+    box-shadow: var(--clr-red-dark);
+    transition: var(--transition);
+}
+
+.sidebar {
+    transform: translate(0);
+}
+
+.open-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+}

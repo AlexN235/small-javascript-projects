@@ -1,3 +1,33 @@
-.body {
-    
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.show-links {
+    height: 200px;
+}
+
+.nav {
+    background: var(--clr-white);
+    padding: 1rem 1.5rem;
+}
+
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section {
+    height = 1000px;
 }

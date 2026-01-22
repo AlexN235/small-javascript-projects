@@ -10,30 +10,34 @@ function getElement(selection) {
 
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.close-btn');
+const sections = document.querySelectorAll('.section');
+
+// modal 
+const mainImg = document.querySelector('.main-img');
+const imgName = document.querySelector('.image-name');
 const modalContent = document.querySelector('.modal-content');
+
+const nature = document.querySelector('.nature');
+const city = document.querySelector('.city');
+
 
 closeBtn.addEventListener('click', () => {
     modal.classList.remove("open");
 });
 
-const sections = document.querySelectorAll('.section');
 sections.forEach((sect) => {
     const imgSet = sect.children;
     Array.from(imgSet).forEach((img) => {
         img.addEventListener('click', () => {
+            // Make model appear
             modal.classList.add('open');
+            
+            // change main image and name.
+            const name = img.title;
+            mainImg.src = `./images/${name}.jpeg`;
+            imgName.innerHTML = name;
+            
+            // change selectable images
         });
-        console.log(modalContent);
-        //modalContent.innerHTML = `
-        //        <button class="prev-btn" /> 
-        //        <button class="next-btn" /> 
-        //        <img class='main-img' src="./images/nature-3.jpeg" alt="">
-        //        <h3 class="image-name">nature-1</h3>
-        //        <div class="modal-images">
-        //            <img class="modal-img selected" src="./images/nature-1.jpeg" title="nature-1" data-id="1">
-        //            <img class="modal-img selected" src="./images/nature-2.jpeg" title="nature-2" data-id="2">
-        //            <img class="modal-img selected" src="./images/nature-3.jpeg" title="nature-3" data-id="3">
-        //        </div>1
-        //        `
     });
 });
